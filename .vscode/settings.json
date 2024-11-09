@@ -21,6 +21,39 @@
                     "description": ""
                 }
             ]
+        },
+        {
+            "name": "c:\\Projetos\\vincula_acao\\src\\components\\textarea\\textarea.jsx",
+            "saveStates": [
+                {
+                    "id": "G679u6z0wL8_N6kYx4bH8lzvzAW33ogR",
+                    "content": "import React from 'react';\r\nimport { TextInput } from 'react-native';\r\nimport { colors } from '../../styles/colors';\r\n\r\nclass TextArea extends React.Component {\r\n  render() {\r\n    const { value, onChangeText, placeholder, style, ...rest } = this.props;\r\n\r\n    return (\r\n      <TextInput\r\n        {...rest}\r\n        style={[styles.textarea, style]}  // Aplica os estilos e qualquer outro estilo extra\r\n        value={value}\r\n        onChangeText={onChangeText}\r\n        placeholder={placeholder}\r\n        multiline={true}  // Permite múltiplas linhas\r\n        numberOfLines={4}  // Define o número de linhas visíveis inicialmente\r\n      />\r\n    );\r\n  }\r\n}\r\n\r\nconst styles = {\r\n  textarea: {\r\n    marginTop: 24,\r\n    padding: 16,\r\n    borderRadius: 8,\r\n    backgroundColor: colors.gelo,  // Cor de fundo do textarea\r\n    width: '100%',  // Ocupa a largura total disponível\r\n    height: 100,    // Define uma altura mínima\r\n    textAlignVertical: 'top',  // Alinha o texto no topo\r\n  },\r\n};\r\n\r\nexport default TextArea;\r\n",
+                    "timestamp": 1731177534945,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "c:\\Projetos\\vincula_acao\\src\\pages\\Home\\index.jsx",
+            "saveStates": [
+                {
+                    "id": "xuNA08tXW9aOvgNcIoakwDM4bc3ZdqNh",
+                    "content": "import React from \"react\";\r\nimport { Text, View, Image } from \"react-native\";\r\nimport \"../../styles/global.css\";\r\nimport Botao from \"../../components/button/button\";\r\nimport { colors } from \"../../styles/colors\";\r\n\r\nfunction Home({ navigation }) {\r\n  return (\r\n    <View\r\n      style={{ backgroundColor: colors.white }}\r\n      className=\"flex-1 justify-center items-center\"\r\n    >\r\n      <Image source={require(\"../../assets/Logo.svg\")} />\r\n      <Text className=\"font-bold text-5xl/[49px] text-center text-black\">\r\n        Conecte-se a {'\n'}\r\n        Quem Precisa\r\n         {'\n'}\r\n        de Você\r\n      </Text>\r\n      <Text className=\"font-regular text-center text-xl/[24px] mt-6\">\r\n        Encontre instituições locais\r\n         {'\n'}\r\n        que precisam da sua ajuda.\r\n         {'\n'}\r\n        Doe e faça a diferença!\r\n      </Text>\r\n      <Botao\r\n        title=\"Registrar\"\r\n        titleStyle={{ fontSize: 18, fontWeight: \"medium\" }}\r\n        buttonStyle={{ backgroundColor: colors.salmao, padding: 24 }}\r\n        onPress={() => navigation.navigate(\"Register\")} // Navegação para tela de registro\r\n      />\r\n      <Botao\r\n        title=\"Entrar\"\r\n        titleStyle={{ fontSize: 18, fontWeight: \"medium\" }}\r\n        buttonStyle={{ backgroundColor: colors.azulescuro, padding: 24 }}\r\n        onPress={() => navigation.navigate(\"Login\")}\r\n      />\r\n    </View>\r\n  );\r\n}\r\n\r\nexport default Home;\r\n",
+                    "timestamp": 1731178879372,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "c:\\Projetos\\vincula_acao\\src\\pages\\Login\\index.jsx",
+            "saveStates": [
+                {
+                    "id": "M7P827LwTncu7TWv#yjZKoYXreQj6feK",
+                    "content": "import React from \"react\";\r\nimport { Text, View, Image, TouchableOpacity } from \"react-native\";\r\nimport { useNavigation } from \"@react-navigation/native\"; // Importa o hook de navegação\r\nimport Input from \"../../components/input/input\";\r\nimport Botao from \"../../components/button/button\";\r\nimport { colors } from \"../../styles/colors\";\r\nimport Header from \"../../components/header/header\";\r\nexport default function Login() {\r\n  const navigation = useNavigation(); // Hook de navegação\r\n\r\n  const handleForgotPassword = () => {\r\n    console.log(\"Recuperar senha clicado\");\r\n  };\r\n\r\n  return (\r\n    <View style={{ backgroundColor: colors.white}} className=\"flex-1\">\r\n      <Header />\r\n      <View className=\"pt-6 justify-center items-center\">\r\n        <Image source={require(\"./assets/LoginLogoTitle.svg\")} />\r\n      </View>\r\n\r\n      <View className=\"flex-1 justify-center items-center\">\r\n        <Text className=\"text-4xl font-montserrat font-bold mb-2\">\r\n          Bem-vindo\r\n        </Text>\r\n        <Text className=\"text-4xl font-montserrat font-bold mb-6\">\r\n          de volta!\r\n        </Text>\r\n        <Text   style={{ color: colors.black, fontWeight: 400 }}\r\n          className=\"text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3\">\r\n          Vamos juntos transformar vidas.\r\n           {'\n'} Entre para continuar  {'\n'}\r\n          conectando solidariedade.\r\n        </Text>\r\n      </View>\r\n\r\n      <View className=\"justify-center items-center\">\r\n        <View className=\"justify-center items-end\">\r\n          <Input\r\n            label=\"E-mail\"\r\n            placeholder=\"E-mail\"\r\n            keyboardType=\"email-address\"\r\n          />\r\n          <Input label=\"Senha\" placeholder=\"Senha\" secureTextEntry={true} />\r\n\r\n          <TouchableOpacity onPress={handleForgotPassword}>\r\n            <Text className=\"text-lg\">Recuperar senha</Text>\r\n          </TouchableOpacity>\r\n        </View>\r\n      </View>\r\n\r\n      <View className=\"justify-center items-center\">\r\n        <Botao\r\n          title=\"Entrar\"\r\n          titleStyle={{ fontSize: 18, fontWeight: \"medium\" }}\r\n          buttonStyle={{ backgroundColor: colors.salmao, padding: 24 }}\r\n        />\r\n      </View>\r\n\r\n      <View className=\"justify-center items-center mt-4 mb-10\">\r\n        <TouchableOpacity onPress={() => navigation.navigate(\"Register\")}>\r\n          <Text className=\"text-lg\">\r\n            <Text style={{ color: \"black\", fontWeight: \"400\" }}>\r\n              Novo por aqui?{\" \"}\r\n            </Text>\r\n            <Text style={{ color: colors.salmao, fontWeight: \"500\" }}>\r\n              Cadastre-se agora\r\n            </Text>\r\n          </Text>\r\n        </TouchableOpacity>\r\n      </View>\r\n    </View>\r\n  );\r\n}\r\n",
+                    "timestamp": 1731178891332,
+                    "description": ""
+                }
+            ]
         }
     ]
 }

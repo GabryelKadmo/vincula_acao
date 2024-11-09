@@ -10,7 +10,7 @@ export default function Register() {
   const navigation = useNavigation();
 
   return (
-    <View className="flex-1">
+    <View style={{ backgroundColor: colors.white }} className="flex-1">
       <Header />
       <View className="pt-4 justify-center items-center">
         <Image source={require("./assets/RegisterLogoTitle.svg")} />
@@ -27,7 +27,7 @@ export default function Register() {
           style={{ color: colors.black, fontWeight: 400 }}
           className="text-xl/[24px] text-center px-4 py-4 w-3/3"
         >
-          Crie sua conta e comece a fazer <br />a diferença em sua <br />
+          Crie sua conta e comece a fazer {"\n"}a diferença em sua {"\n"}
           comunidade.
         </Text>
       </View>
