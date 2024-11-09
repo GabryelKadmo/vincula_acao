@@ -1,10 +1,13 @@
 import React from "react";
 import { Text, View, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native"; // Importa o hook de navegação
 import Input from "../../components/input/input";
 import Botao from "../../components/button/button";
 import { colors } from "../../styles/colors";
 
 export default function Login() {
+  const navigation = useNavigation(); // Hook de navegação
+
   const handleForgotPassword = () => {
     console.log("Recuperar senha clicado");
   };
@@ -20,11 +23,13 @@ export default function Login() {
           Bem-vindo
         </Text>
         <Text className="text-4xl font-montserrat font-bold mb-6">
-          De volta!
+          de volta!
         </Text>
-        <Text className="text-lg text-center justify-center px-4 w-3/3">
-          Vamos juntos transformar vidas. Entre para continuar conectando
-          solidariedade.
+        <Text   style={{ color: colors.black, fontWeight: 400 }}
+          className="text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3">
+          Vamos juntos transformar vidas.
+          <br /> Entre para continuar <br />
+          conectando solidariedade.
         </Text>
       </View>
 
@@ -52,7 +57,7 @@ export default function Login() {
       </View>
 
       <View className="justify-center items-center mt-4 mb-10">
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Register")}>
           <Text className="text-lg">
             <Text style={{ color: "black", fontWeight: "400" }}>
               Novo por aqui?{" "}
