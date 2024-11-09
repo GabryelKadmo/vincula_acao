@@ -80,7 +80,7 @@ const styles = {
     outline: "none",
     color: colors.azulcinzento,
     flex: 1,
-    marginBottom: 10,
+    marginBottom: 5,
   },
   icon: {
     position: "absolute",
