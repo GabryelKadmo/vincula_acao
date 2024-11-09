@@ -48,7 +48,7 @@ export default function Register() {
           />
         </View>
 
-        <View className="justify-center items-center mt-0">
+        <View className="justify-center items-center mt-8">
           <Botao
             title="Registrar"
             titleStyle={{ fontSize: 18, fontWeight: "medium" }}

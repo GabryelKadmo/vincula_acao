@@ -25,18 +25,20 @@ function Home({ navigation }) {
           {"\n"}
           Doe e faça a diferença!
         </Text>
-        <Botao
-          title="Registrar"
-          titleStyle={{ fontSize: 18, fontWeight: "medium" }}
-          buttonStyle={{ backgroundColor: colors.salmao, padding: 24 }}
-          onPress={() => navigation.navigate("Register")} // Navegação para tela de registro
-        />
-        <Botao
-          title="Entrar"
-          titleStyle={{ fontSize: 18, fontWeight: "medium" }}
-          buttonStyle={{ backgroundColor: colors.azulescuro, padding: 24 }}
-          onPress={() => navigation.navigate("Login")}
-        />
+        <View className="gap-8 mt-10">
+          <Botao
+            title="Registrar"
+            titleStyle={{ fontSize: 18, fontWeight: "medium" }}
+            buttonStyle={{ backgroundColor: colors.salmao, padding: 24 }}
+            onPress={() => navigation.navigate("Register")}
+          />
+          <Botao
+            title="Entrar"
+            titleStyle={{ fontSize: 18, fontWeight: "medium" }}
+            buttonStyle={{ backgroundColor: colors.azulescuro, padding: 24 }}
+            onPress={() => navigation.navigate("Login")}
+          />
+        </View>
       </View>
     </ScrollView>
   );

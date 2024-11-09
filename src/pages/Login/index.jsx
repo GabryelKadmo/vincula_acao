@@ -52,7 +52,7 @@ export default function Login() {
           </View>
         </View>
 
-        <View className="justify-center items-center">
+        <View className="justify-center items-center mt-4">
           <Botao
             title="Entrar"
             titleStyle={{ fontSize: 18, fontWeight: "medium" }}

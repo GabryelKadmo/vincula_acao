@@ -15,7 +15,7 @@ class Botao extends React.Component {
 
 const styles = {
   button: {
-    marginTop: 24,
+    marginTop: 0,
     padding: 16,
     borderRadius: 50,
     backgroundColor: '#4CAF50',
