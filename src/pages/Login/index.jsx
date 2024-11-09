@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import { useNavigation } from "@react-navigation/native"; // Importa o hook de navegação
 import Input from "../../components/input/input";
 import Botao from "../../components/button/button";
@@ -13,64 +13,66 @@ export default function Login() {
   };
 
   return (
-    <View style={{ backgroundColor: colors.white }} className="flex-1">
-      <Header />
-      <View className="pt-6 justify-center items-center">
-        <Image source={require("./assets/LoginLogoTitle.svg")} />
-      </View>
+    <ScrollView style={{ backgroundColor: colors.white, height: 400 }}>
+      <View style={{ backgroundColor: colors.white }} className="flex-1">
+        <Header />
+        <View className="pt-6 justify-center items-center">
+          <Image source={require("./assets/LoginLogoTitle.svg")} />
+        </View>
 
-      <View className="flex-1 justify-center items-center">
-        <Text className="text-4xl font-montserrat font-bold mb-2">
-          Bem-vindo
-        </Text>
-        <Text className="text-4xl font-montserrat font-bold mb-6">
-          de volta!
-        </Text>
-        <Text
-          style={{ color: colors.black, fontWeight: 400 }}
-          className="text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3"
-        >
-          Vamos juntos transformar vidas.
-          {"\n"} Entre para continuar {"\n"}
-          conectando solidariedade.
-        </Text>
-      </View>
+        <View className="flex-1 justify-center items-center">
+          <Text className="text-4xl font-montserrat font-bold mb-2">
+            Bem-vindo
+          </Text>
+          <Text className="text-4xl font-montserrat font-bold mb-6">
+            de volta!
+          </Text>
+          <Text
+            style={{ color: colors.black, fontWeight: 400 }}
+            className="text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3"
+          >
+            Vamos juntos transformar vidas.
+            {"\n"} Entre para continuar {"\n"}
+            conectando solidariedade.
+          </Text>
+        </View>
 
-      <View className="justify-center items-center">
-        <View className="justify-center items-end">
-          <Input
-            label="E-mail"
-            placeholder="E-mail"
-            keyboardType="email-address"
+        <View className="justify-center items-center">
+          <View className="justify-center items-end">
+            <Input
+              label="E-mail"
+              placeholder="E-mail"
+              keyboardType="email-address"
+            />
+            <Input label="Senha" placeholder="Senha" secureTextEntry={true} />
+
+            <TouchableOpacity onPress={handleForgotPassword}>
+              <Text className="text-lg">Recuperar senha</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <View className="justify-center items-center">
+          <Botao
+            title="Entrar"
+            titleStyle={{ fontSize: 18, fontWeight: "medium" }}
+            buttonStyle={{ backgroundColor: colors.salmao, padding: 24 }}
           />
-          <Input label="Senha" placeholder="Senha" secureTextEntry={true} />
+        </View>
 
-          <TouchableOpacity onPress={handleForgotPassword}>
-            <Text className="text-lg">Recuperar senha</Text>
+        <View className="justify-center items-center mt-4 mb-10">
+          <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+            <Text className="text-lg">
+              <Text style={{ color: "black", fontWeight: "400" }}>
+                Novo por aqui?{" "}
+              </Text>
+              <Text style={{ color: colors.salmao, fontWeight: "500" }}>
+                Cadastre-se agora
+              </Text>
+            </Text>
           </TouchableOpacity>
         </View>
       </View>
-
-      <View className="justify-center items-center">
-        <Botao
-          title="Entrar"
-          titleStyle={{ fontSize: 18, fontWeight: "medium" }}
-          buttonStyle={{ backgroundColor: colors.salmao, padding: 24 }}
-        />
-      </View>
-
-      <View className="justify-center items-center mt-4 mb-10">
-        <TouchableOpacity onPress={() => navigation.navigate("Register")}>
-          <Text className="text-lg">
-            <Text style={{ color: "black", fontWeight: "400" }}>
-              Novo por aqui?{" "}
-            </Text>
-            <Text style={{ color: colors.salmao, fontWeight: "500" }}>
-              Cadastre-se agora
-            </Text>
-          </Text>
-        </TouchableOpacity>
-      </View>
-    </View>
+    </ScrollView>
   );
 }
