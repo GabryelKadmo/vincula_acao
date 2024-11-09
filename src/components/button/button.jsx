@@ -3,10 +3,10 @@ import { TouchableOpacity, Text } from 'react-native';
 
 class Botao extends React.Component {
   render() {
-    const { title, titleStyle, buttonStyle } = this.props;
+    const { title, titleStyle, buttonStyle, onPress } = this.props;
 
     return (
-      <TouchableOpacity style={[styles.button, buttonStyle]}>
+      <TouchableOpacity style={[styles.button, buttonStyle]} onPress={onPress}>
         <Text style={[styles.title, titleStyle]}>{title}</Text>
       </TouchableOpacity>
     );
