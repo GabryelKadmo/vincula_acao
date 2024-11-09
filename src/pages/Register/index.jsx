@@ -4,17 +4,19 @@ import { useNavigation } from "@react-navigation/native";
 import Input from "../../components/input/input";
 import Botao from "../../components/button/button";
 import { colors } from "../../styles/colors";
+import Header from "../../components/header/header";
 
 export default function Register() {
   const navigation = useNavigation();
 
   return (
     <View className="flex-1">
+      <Header />
       <View className="pt-4 justify-center items-center">
         <Image source={require("./assets/RegisterLogoTitle.svg")} />
       </View>
 
-      <View className="flex-1 justify-start items-center px-0 mt-4">
+      <View className="flex-1 justify-start items-center mt-4">
         <Text
           style={{ color: colors.black }}
           className="text-4xl/[41px] font-montserrat w-2/3 font-bold text-center mb-2"
@@ -23,13 +25,14 @@ export default function Register() {
         </Text>
         <Text
           style={{ color: colors.black, fontWeight: 400 }}
-          className="text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3"
+          className="text-xl/[24px] text-center px-4 py-4 w-3/3"
         >
-          Crie sua conta e comece a fazer <br />a diferença em sua <br />comunidade.
+          Crie sua conta e comece a fazer <br />a diferença em sua <br />
+          comunidade.
         </Text>
       </View>
 
-      <View className="justify-center items-center px-4">
+      <View className="justify-center items-center">
         <Input label="Nome" placeholder="Nome" />
         <Input
           label="E-mail"

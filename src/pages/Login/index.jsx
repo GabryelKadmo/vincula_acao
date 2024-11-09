@@ -4,7 +4,7 @@ import { useNavigation } from "@react-navigation/native"; // Importa o hook de n
 import Input from "../../components/input/input";
 import Botao from "../../components/button/button";
 import { colors } from "../../styles/colors";
-
+import Header from "../../components/header/header";
 export default function Login() {
   const navigation = useNavigation(); // Hook de navegação
 
@@ -14,6 +14,7 @@ export default function Login() {
 
   return (
     <View className="flex-1">
+      <Header />
       <View className="pt-6 justify-center items-center">
         <Image source={require("./assets/LoginLogoTitle.svg")} />
       </View>
