@@ -13,7 +13,7 @@ export default function Login() {
   };
 
   return (
-    <View className="flex-1">
+    <View style={{ backgroundColor: colors.white }} className="flex-1">
       <Header />
       <View className="pt-6 justify-center items-center">
         <Image source={require("./assets/LoginLogoTitle.svg")} />
@@ -26,10 +26,12 @@ export default function Login() {
         <Text className="text-4xl font-montserrat font-bold mb-6">
           de volta!
         </Text>
-        <Text   style={{ color: colors.black, fontWeight: 400 }}
-          className="text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3">
+        <Text
+          style={{ color: colors.black, fontWeight: 400 }}
+          className="text-xl/[24px] text-center px-4 py-4 mb-4 w-3/3"
+        >
           Vamos juntos transformar vidas.
-          <br /> Entre para continuar <br />
+          {"\n"} Entre para continuar {"\n"}
           conectando solidariedade.
         </Text>
       </View>

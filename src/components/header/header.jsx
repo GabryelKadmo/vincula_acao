@@ -13,7 +13,7 @@ const Header = () => {
         <Icon name="arrow-left" size={26} color={colors.black} />
       </TouchableOpacity>
 
-      <TouchableOpacity onPress={() => console.log("Ícone de e-mail pressionado")}>
+      <TouchableOpacity onPress={() => navigation.navigate("Contact")}>
         <Icon name="mail" size={26} color={colors.black} />
       </TouchableOpacity>
     </View>
