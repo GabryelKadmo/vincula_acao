@@ -12,19 +12,17 @@ export default function Login() {
   return (
     <View className="flex-1">
       <View className="pt-6 justify-center items-center">
-        <Text className="text-8xl font-thin">Vincula</Text>
-        <View className="flex-row items-center mt-4">
-          <Image
-            source={require("../../assets/Logo.svg")}
-            style={{ width: 100, height: 100, marginRight: 20 }}
-          />
-          <Text className="text-8xl font-thin">Ação</Text>
-        </View>
+        <Image source={require("./assets/LoginLogoTitle.svg")} />
       </View>
 
       <View className="flex-1 justify-center items-center">
-        <Text className="text-4xl font-montserrat font-bold mb-6">Bem-vindo de volta!</Text>
-        <Text className="text-xl text-center px-4">
+        <Text className="text-4xl font-montserrat font-bold mb-2">
+          Bem-vindo
+        </Text>
+        <Text className="text-4xl font-montserrat font-bold mb-6">
+          De volta!
+        </Text>
+        <Text className="text-lg text-center justify-center px-4 w-3/3">
           Vamos juntos transformar vidas. Entre para continuar conectando
           solidariedade.
         </Text>
