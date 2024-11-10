@@ -16,19 +16,19 @@ export default function Register() {
       <ScrollView contentContainerStyle={{ paddingHorizontal: 16 }} className="bg-white flex-1">
         <View className="bg-white flex-1">
           <Header />
-          <View className="pt-4 justify-center items-center">
+          <View className="pt-0 justify-center items-center">
             <Image
               source={RegisterLogoTitle}
               style={{
                 width: "100%",
                 height: undefined,
-                aspectRatio: 350 / 140,
+                aspectRatio: 390 / 140,
               }}
               resizeMode="contain"
             />
           </View>
 
-          <View className="flex-1 justify-start items-center mt-4">
+          <View className="flex-1 justify-start items-center mt-0">
             <Text className="text-4xl/[41px] font-montserrat font-bold text-center mb-2 text-black w-2/3">
               Junte-se à nossa rede de solidariedade
             </Text>
@@ -57,7 +57,7 @@ export default function Register() {
             <Botao title="Registrar" titleStyle="text-lg font-medium" />
           </View>
 
-          <View className="justify-center items-center mt-4 mb-10">
+          <View className="justify-center items-center mt-4 mb-0">
             <TouchableOpacity onPress={() => navigation.navigate("Login")}>
               <Text className="text-lg">
                 <Text className="text-black font-normal">Já tem conta? </Text>

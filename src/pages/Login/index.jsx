@@ -36,7 +36,7 @@ export default function Login() {
             <Text className="text-4xl font-montserrat font-bold mb-2">
               Bem-vindo
             </Text>
-            <Text className="text-4xl font-montserrat font-bold mb-6">
+            <Text className="text-4xl font-montserrat font-bold">
               de volta!
             </Text>
             <Text className="text-xl/[24px] text-center text-black py-4 mb-4 w-full">
