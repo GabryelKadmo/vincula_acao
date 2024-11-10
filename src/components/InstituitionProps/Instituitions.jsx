@@ -5,7 +5,10 @@ import { Image } from "expo-image";
 
 const InstituitionCard = ({ nome, nicho, imagem, onPress }) => {
   return (
-    <View className="bg-gray-100 mb-5 rounded-lg shadow-md flex-row p-1.5 w-full relative">
+    <TouchableOpacity
+      onPress={onPress}
+      className="bg-gray-100 mb-5 rounded-lg shadow-md flex-row p-1.5 w-full"
+    >
       <Image
         source={{ uri: imagem }}
         style={{ width: 70, height: 70, borderRadius: 10 }}
@@ -18,14 +21,10 @@ const InstituitionCard = ({ nome, nicho, imagem, onPress }) => {
         </Text>
       </View>
 
-      {/* Centralizando a lupa */}
-      <TouchableOpacity
-        onPress={onPress}
-        className="absolute right-3.5 top-1/2 transform -translate-y-1/2 justify-center items-center"
-      >
+      <View className="absolute right-3.5 top-1/2 transform -translate-y-1/2 justify-center items-center">
         <Image source={Lupa} style={{ width: 20, height: 20 }} />
-      </TouchableOpacity>
-    </View>
+      </View>
+    </TouchableOpacity>
   );
 };
 

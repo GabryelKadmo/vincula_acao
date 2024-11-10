@@ -1,50 +1,50 @@
 [
-    {
-        "id": 1,
-        "nome": "Casa Esperança",
-        "nicho": "Apoio em Situação de Rua",
-        "descricao": "Oferece abrigo, refeições diárias, e suporte psicológico para pessoas em situação de rua. A Casa Esperança visa reintegrar esses indivíduos à sociedade por meio de programas de capacitação profissional e apoio emocional contínuo.",
-        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg",
-        "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
-    },
-    {
-        "id": 2,
-        "nome": "Fundação Criança Feliz",
-        "nicho": "Educação Infantil",
-        "descricao": "Desenvolve atividades educativas, esportivas e culturais para crianças em situação de vulnerabilidade, proporcionando um ambiente seguro e acolhedor. A fundação também oferece apoio psicológico e reforço escolar para que essas crianças possam ter um futuro mais promissor.",
-        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg",
-        "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
-    },
-    {
-        "id": 3,
-        "nome": "Vida Animal",
-        "nicho": "Proteção Animal",
-        "descricao": "Resgata, acolhe e oferece cuidados veterinários para animais abandonados. O projeto busca promover a adoção responsável e conscientizar a população sobre o cuidado com os animais. Organiza eventos de adoção e campanhas educativas.",
-        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg",
-        "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
-    },
-    {
-        "id": 4,
-        "nome": "Lar dos Idosos Sorriso",
-        "nicho": "Assistência ao Idoso",
-        "descricao": "Proporciona um ambiente acolhedor e seguro para idosos em situação de vulnerabilidade. Oferece atendimento médico, fisioterapia, atividades recreativas e acompanhamento social para melhorar a qualidade de vida e promover o bem-estar dos residentes.",
-        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg",
-        "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
-    },
-    {
-        "id": 5,
-        "nome": "Alimento para Todos",
-        "nicho": "Segurança Alimentar",
-        "descricao": "Distribui cestas básicas e refeições nutritivas para famílias em situação de insegurança alimentar. O projeto organiza campanhas de arrecadação e trabalha com voluntários para garantir que alimentos cheguem às comunidades mais carentes.",
-        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg",
-        "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
-    },
-    {
-        "id": 6,
-        "nome": "Renascer da Esperança",
-        "nicho": "Reabilitação e Inclusão Social",
-        "descricao": "Oferece programas de reabilitação para pessoas em processo de recuperação de dependência química. Além do acompanhamento psicológico, o projeto promove oficinas de capacitação profissional e suporte na busca por oportunidades de trabalho.",
-        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg",
-        "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
-    }
+  {
+    "id": 1,
+    "nome": "Obra do Berço RJ",
+    "nicho": "Apoio às crianças",
+    "descricao": "Apoie a Obra do Berço a continuar com a sua missão de acolher e educar, com comprometimento e excelência, crianças de 0 a 4 anos.",
+    "imagem": "https://pqdassets.nyc3.digitaloceanspaces.com/2821/card-pqd.png",
+    "backgroundImage": "https://aobradobercorj.org.br/wp-content/uploads/2024/08/ods-obra-2.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "SOS Pantanal",
+    "nicho": "Proteção do Meio Ambiente",
+    "descricao": "Um dos biomas mais importantes do mundo conta com a mobilização coletiva para resistir. O SOS Pantanal direciona esse apoio, fortaleça esse movimento e doe!",
+    "imagem": "https://pqdassets.nyc3.digitaloceanspaces.com/3246/card-pqd-%2853%29.png",
+    "backgroundImage": "https://pqdassets.nyc3.digitaloceanspaces.com/290/400A3663.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Onçafari",
+    "nicho": "Proteção Animal",
+    "descricao": "O Onçafari tem a missão de conservar a biodiversidade brasileira através da proteção de áreas naturais e do apoio ao desenvolvimento socioeconômico das comunidades locais.",
+    "imagem": "https://pqdassets.nyc3.digitaloceanspaces.com/709/Apresenta%C3%A7%C3%A3o-sem-t%C3%ADtulo-%2812%29.png",
+    "backgroundImage": "https://pqdassets.nyc3.digitaloceanspaces.com/710/Apresenta%C3%A7%C3%A3o-sem-t%C3%ADtulo-%2814%29.png"
+  },
+  {
+    "id": 4,
+    "nome": "SOS Amazônia",
+    "nicho": "Proteção do Meio Ambiente",
+    "descricao": "A SOS Amazônia busca a conscientização ambiental e política da sociedade em relação a maior floresta tropical do mundo, para que a vida humana e a vida animal possam coexistir em paz.",
+    "imagem": "https://pqdassets.nyc3.digitaloceanspaces.com/3247/card-pqd-%2854%29.png",
+    "backgroundImage": "https://pqdassets.nyc3.digitaloceanspaces.com/822/imagem-%2879%29.png"
+  },
+  {
+    "id": 5,
+    "nome": "AACD Brasil",
+    "nicho": "Deficiência Física",
+    "descricao": "Desde 1950 a AACD trabalha para que as pessoas com deficiência física possam atingir seu máximo potencial, podendo buscar sua plena inserção na sociedade e contribuindo para um mundo que acolhe melhor a diversidade.",
+    "imagem": "https://pqdassets.nyc3.digitaloceanspaces.com/2968/card-pqd-%281%29.png",
+    "backgroundImage": "https://pqdassets.nyc3.digitaloceanspaces.com/2096/Imagens-PQD.png"
+  },
+  {
+    "id": 6,
+    "nome": "Escola de Gente",
+    "nicho": "Educação",
+    "descricao": "Desde 2002 atuando em prol de uma sociedade inclusiva, para que pessoas com e sem deficiência exerçam seus direitos humanos desde a infância.",
+    "imagem": "https://pqdassets.nyc3.digitaloceanspaces.com/3204/card-pqd-%2815%29.png",
+    "backgroundImage": "https://img.freepik.com/fotos-premium/arvores-que-crescem-na-floresta_1048944-30368869.jpg?w=1380"
+  }
 ]

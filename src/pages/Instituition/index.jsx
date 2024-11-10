@@ -3,12 +3,12 @@ import { ScrollView, View, Text } from "react-native";
 import HeaderAfterLogin from "../../components/header/headerAfterLogin";
 import InstituitionCard from "../../components/InstituitionProps/Instituitions";
 import instituicoesData from "../../data/data.json";
-import { useNavigation } from "@react-navigation/native";  // Importando o hook de navegação
+import { useNavigation } from "@react-navigation/native";  
 import InstituitionLogoTitle from "./assets/InstituitionImageTitle.png";
 import { Image } from "expo-image";
 
 export default function Instituition() {
-  const navigation = useNavigation();  // Hook de navegação
+  const navigation = useNavigation(); 
 
   const handleCardPress = (instituicao) => {
     navigation.navigate("InstituitionDetails", { instituicao });
@@ -44,7 +44,7 @@ export default function Instituition() {
               nome={instituicao.nome}
               nicho={instituicao.nicho}
               imagem={instituicao.imagem}
-              onPress={() => handleCardPress(instituicao)} // Passando a instituição para a navegação
+              onPress={() => handleCardPress(instituicao)}
             />
           ))}
         </View>

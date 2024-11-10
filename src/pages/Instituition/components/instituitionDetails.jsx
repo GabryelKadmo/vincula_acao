@@ -16,7 +16,6 @@ export default function InstituitionDetails({ route }) {
       >
         <Header />
 
-        {/* Background Image */}
         <ImageBackground
           source={{ uri: instituicao.backgroundImage }}
           style={{
@@ -28,38 +27,32 @@ export default function InstituitionDetails({ route }) {
             overflow: "hidden",
           }}
           resizeMode="cover"
-        >
-          {/* Background content (optional, e.g., title over the background) */}
-        </ImageBackground>
+        ></ImageBackground>
 
-        {/* Institution Image */}
         <Image
           source={{ uri: instituicao.imagem }}
           style={{
             width: 150,
             height: 150,
             position: "absolute",
-            top: 190, // Adjust this for better alignment
+            top: 190,
             alignSelf: "center",
             borderRadius: 75,
-            borderWidth: 4, // Optional border to make the image stand out
-            borderColor: "#fff", // Optional: a white border around the image
+            borderWidth: 1,
+            borderColor: "#DBEDF3",
           }}
           resizeMode="cover"
         />
 
         <View className="justify-center items-center mt-12">
-          {/* Institution Name */}
           <Text className="text-xl font-semibold text-black mt-4 font-montserrat">
             {instituicao.nome}
           </Text>
 
-          {/* Description */}
           <Text className="text-base text-center text-gray-800 mt-4 font-montserrat">
             {instituicao.descricao}
           </Text>
 
-          {/* Address Section */}
           <View className="mt-6">
             <Text className="text-xl mb-4 text-center font-semibold text-black font-montserrat">
               Endereço
@@ -70,17 +63,15 @@ export default function InstituitionDetails({ route }) {
                 width: 320,
                 height: 180,
                 resizeMode: "cover",
-                borderRadius: 10, // Optional: to add rounded corners
+                borderRadius: 10,
               }}
             />
           </View>
 
-          {/* Donation Button */}
           <View className="justify-center items-center mt-6">
             <Botao title="Quero doar" titleStyle="text-lg font-medium" />
           </View>
 
-          {/* Disclaimer */}
           <Text className="text-xs text-center text-gray-800 mt-6 mb-20 justify-start">
             As doações são realizadas diretamente às instituições, e o app
             Vinculação não se responsabiliza pela gestão {"\n"} dos recursos
