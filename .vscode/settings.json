@@ -54,6 +54,39 @@
                     "description": ""
                 }
             ]
+        },
+        {
+            "name": "c:\\Projetos\\vincula_acao\\src\\components\\InstituitionProps\\Instituitions.jsx",
+            "saveStates": [
+                {
+                    "id": "q_mIZljmCIheKht8IMfeyBBMHu-tFpS6",
+                    "content": "import React from \"react\";\r\nimport { Text, View, Image, TouchableOpacity } from \"react-native\";\r\nimport { colors } from \"../../styles/colors\";\r\nimport Lupa from \"./assets/IconLupa.svg\";\r\n\r\nconst InstituitionCard = ({ nome, nicho, imagem, onPress }) => {\r\n  return (\r\n    <View\r\n      style={{\r\n        backgroundColor: colors.gelo,\r\n        marginBottom: 20,\r\n        borderRadius: 15,\r\n        shadowColor: \"#000\",\r\n        shadowOffset: { width: 0, height: 2 },\r\n        shadowOpacity: 0.8,\r\n        shadowRadius: 4,\r\n        elevation: 5,\r\n        flexDirection: \"row\",\r\n        padding: 5,\r\n        width: \"100%\",\r\n        position: \"relative\",\r\n      }}\r\n    >\r\n      <Image\r\n        source={{ uri: imagem }}\r\n        style={{\r\n          width: 80,\r\n          height: 80,\r\n          borderRadius: 10,\r\n          marginRight: 15,\r\n        }}\r\n      />\r\n\r\n      <View style={{ justifyContent: \"center\" }}>\r\n        <Text\r\n          style={{\r\n            fontSize: 16,\r\n            fontWeight: \"600\",\r\n            color: colors.black,\r\n            marginBottom: 5,\r\n          }}\r\n        >\r\n          {nome}\r\n        </Text>\r\n        <Text\r\n          style={{\r\n            fontSize: 14,\r\n            fontFamily: \"\",\r\n            fontWeight: \"400\",\r\n            color: colors.gray,\r\n            marginBottom: 5,\r\n          }}\r\n        >\r\n          {nicho}\r\n        </Text>\r\n      </View>\r\n\r\n      <TouchableOpacity\r\n        onPress={onPress}\r\n        style={{\r\n          position: \"absolute\",\r\n          right: 14,\r\n          top: \"50%\",\r\n          transform: [{ translateY: -15 }],\r\n          justifyContent: \"center\",\r\n          alignItems: \"center\",\r\n        }}\r\n      >\r\n        <Image source={Lupa} style={{ width: 30, height: 30 }} />\r\n      </TouchableOpacity>\r\n    </View>\r\n  );\r\n};\r\n\r\nexport default InstituitionCard;\r\n",
+                    "timestamp": 1731197447420,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "c:\\Projetos\\vincula_acao\\src\\components\\button\\button.jsx",
+            "saveStates": [
+                {
+                    "id": "WdGzLcL_8-YqMtYd6ZkN57RGbmL26Rn5",
+                    "content": "import React from \"react\";\r\nimport { TouchableOpacity, Text } from \"react-native\";\r\n\r\nclass Botao extends React.Component {\r\n  render() {\r\n    const { title, titleStyle, buttonStyle, onPress } = this.props;\r\n\r\n    return (\r\n      <TouchableOpacity\r\n        className={`p-3 rounded-full bg-salmao w-96 items-center justify-center ${buttonStyle}`}\r\n        onPress={onPress}\r\n      >\r\n        <Text className={`text-white text-center text-base ${titleStyle}`}>{title}</Text>\r\n      </TouchableOpacity>\r\n    );\r\n  }\r\n}\r\n\r\nexport default Botao;\r\n",
+                    "timestamp": 1731254908950,
+                    "description": ""
+                }
+            ]
+        },
+        {
+            "name": "c:\\Projetos\\vincula_acao\\src\\pages\\Contact\\index.jsx",
+            "saveStates": [
+                {
+                    "id": "hTH6l6#wAEnPYQ4qlfzUWcTvuGpRpCfw",
+                    "content": "import React from \"react\";\r\nimport { Text, View, ScrollView } from \"react-native\";\r\nimport \"../../styles/global.css\";\r\nimport Botao from \"../../components/button/button\";\r\nimport Header from \"../../components/header/header\";\r\nimport InputContact from \"../../components/input/inputContact\";\r\nimport TextArea from \"../../components/textarea/textarea\";\r\nimport { SafeAreaView } from \"react-native-safe-area-context\";\r\nimport LogoTitle from \"./assets/ContactImageTitle.svg\";\r\nimport { Image } from \"expo-image\";\r\nexport default function Contact() {\r\n  return (\r\n    <SafeAreaView className=\"flex-1\">\r\n      <View className=\"flex-1 bg-white\">\r\n        <Header />\r\n        <View className=\"pt-4 justify-center items-center\">\r\n          <View>\r\n            <Image\r\n              source={LogoTitle}\r\n              style={{\r\n                width: \"100%\",\r\n                height: undefined,\r\n                aspectRatio: 350 / 140,\r\n              }}\r\n              resizeMode=\"contain\"\r\n            />\r\n          </View>\r\n          <Text className=\"text-xl text-center text-black px-4 py-4 mb-4 w-full font-normal\">\r\n            Dúvidas, sugestões ou deseja se conectar? {\"\\n\"}\r\n            Estamos aqui para ajudar.\r\n          </Text>\r\n        </View>\r\n\r\n        <View className=\"px-4 mb-4 justify-center items-center\">\r\n          <View className=\"w-full\">\r\n            <InputContact\r\n              label=\"E-mail\"\r\n              placeholder=\"Digite seu e-mail\"\r\n              keyboardType=\"email-address\"\r\n            />\r\n            <TextArea\r\n              label=\"Mensagem\"\r\n              placeholder=\"Deixe sua mensagem ou sugestão....\"\r\n            />\r\n          </View>\r\n        </View>\r\n\r\n        <View className=\"justify-center items-center mt-6 px-4\">\r\n          <Botao\r\n            title=\"Enviar Mensagem\"\r\n            titleStyle={{ fontWeight: \"medium\" }}\r\n            buttonStyle=\"!bg-salmao\"\r\n          />\r\n        </View>\r\n\r\n        <Text className=\"text-xl text-center text-black mt-6 px-4 py-4 mb-4 w-full font-normal\">\r\n          Quer saber mais? Acompanhe nossas redes sociais e fique por dentro das\r\n          campanhas.\r\n        </Text>\r\n        <View className=\"flex-row justify-center items-center gap-4 mb-16\">\r\n          <Image source={require(\"./assets/facebook.svg\")} style={{ width: 28, height: 28 }} />\r\n          <Image source={require(\"./assets/instagram.svg\")} style={{ width: 24, height: 24 }} />\r\n          <Image source={require(\"./assets/twitter.svg\")} style={{ width: 24, height: 24 }} />\r\n          <Image source={require(\"./assets/threads.svg\")} style={{ width: 24, height: 24 }} />\r\n          <Image source={require(\"./assets/linkedin.svg\")} style={{ width: 24, height: 24 }} />\r\n        </View>\r\n      </View>\r\n    </SafeAreaView>\r\n  );\r\n}\r\n",
+                    "timestamp": 1731258309278,
+                    "description": ""
+                }
+            ]
         }
     ]
 }

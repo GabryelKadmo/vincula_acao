@@ -2,43 +2,43 @@
     {
         "id": 1,
         "nome": "Casa Esperança",
-        "nicho": "Apoio a Pessoas em Situação de Rua",
+        "nicho": "Apoioem Situação de Rua",
         "descricao": "Oferece abrigo, refeições diárias, e suporte psicológico para pessoas em situação de rua. A Casa Esperança visa reintegrar esses indivíduos à sociedade por meio de programas de capacitação profissional e apoio emocional contínuo.",
-        "imagem": "https://exemplo.com/imagens/casa_esperanca.jpg"
+        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
     },
     {
         "id": 2,
         "nome": "Fundação Criança Feliz",
         "nicho": "Educação Infantil",
         "descricao": "Desenvolve atividades educativas, esportivas e culturais para crianças em situação de vulnerabilidade, proporcionando um ambiente seguro e acolhedor. A fundação também oferece apoio psicológico e reforço escolar para que essas crianças possam ter um futuro mais promissor.",
-        "imagem": "https://exemplo.com/imagens/fundacao_crianca_feliz.jpg"
+        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
     },
     {
         "id": 3,
         "nome": "Vida Animal",
         "nicho": "Proteção Animal",
         "descricao": "Resgata, acolhe e oferece cuidados veterinários para animais abandonados. O projeto busca promover a adoção responsável e conscientizar a população sobre o cuidado com os animais. Organiza eventos de adoção e campanhas educativas.",
-        "imagem": "https://exemplo.com/imagens/vida_animal.jpg"
+        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
     },
     {
         "id": 4,
         "nome": "Lar dos Idosos Sorriso",
         "nicho": "Assistência ao Idoso",
         "descricao": "Proporciona um ambiente acolhedor e seguro para idosos em situação de vulnerabilidade. Oferece atendimento médico, fisioterapia, atividades recreativas e acompanhamento social para melhorar a qualidade de vida e promover o bem-estar dos residentes.",
-        "imagem": "https://exemplo.com/imagens/lar_idosos_sorriso.jpg"
+        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
     },
     {
         "id": 5,
         "nome": "Alimento para Todos",
         "nicho": "Segurança Alimentar",
         "descricao": "Distribui cestas básicas e refeições nutritivas para famílias em situação de insegurança alimentar. O projeto organiza campanhas de arrecadação e trabalha com voluntários para garantir que alimentos cheguem às comunidades mais carentes.",
-        "imagem": "https://exemplo.com/imagens/alimento_para_todos.jpg"
+        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
     },
     {
         "id": 6,
         "nome": "Renascer da Esperança",
         "nicho": "Reabilitação e Inclusão Social",
         "descricao": "Oferece programas de reabilitação para pessoas em processo de recuperação de dependência química. Além do acompanhamento psicológico, o projeto promove oficinas de capacitação profissional e suporte na busca por oportunidades de trabalho.",
-        "imagem": "https://exemplo.com/imagens/renascer_esperanca.jpg"
+        "imagem": "https://cdn.pixabay.com/photo/2024/02/26/19/39/monochrome-image-8598798_1280.jpg"
     }
 ]

@@ -5,13 +5,12 @@ import Home from './src/pages/Home/index';
 import Login from './src/pages/Login/index';
 import Register from './src/pages/Register/index';
 import Contact from "./src/pages/Contact/index";
-
+import Instituition from "./src/pages/Instituition/index";
 
 const Stack = createStackNavigator();
 
 export default function App() {
   return (
-
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen
@@ -32,6 +31,11 @@ export default function App() {
         <Stack.Screen
           name="Contact"
           component={Contact}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Instituition"
+          component={Instituition}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
