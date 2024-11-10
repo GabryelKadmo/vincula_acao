@@ -6,7 +6,7 @@ import Login from './src/pages/Login/index';
 import Register from './src/pages/Register/index';
 import Contact from "./src/pages/Contact/index";
 import Instituition from "./src/pages/Instituition/index";
-
+import InstituitionDetails from "./src/pages/Instituition/components/instituitionDetails";
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -36,6 +36,11 @@ export default function App() {
         <Stack.Screen
           name="Instituition"
           component={Instituition}
+          options={{ headerShown: false }}
+        />
+         <Stack.Screen
+          name="InstituitionDetails"
+          component={InstituitionDetails}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>
