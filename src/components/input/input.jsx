@@ -1,7 +1,5 @@
 import React from "react";
-import { TextInput, View, Text, TouchableOpacity } from "react-native";
-import { colors } from "../../styles/colors";
-import { fonts } from "../../styles/fontsfamily";
+import { TextInput, View, TouchableOpacity } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
 
 class Input extends React.Component {
@@ -20,7 +18,6 @@ class Input extends React.Component {
       value,
       onChangeText,
       inputStyle,
-      labelStyle,
       placeholder,
       secureTextEntry,
       keyboardType,
@@ -28,10 +25,10 @@ class Input extends React.Component {
     const { isPasswordVisible } = this.state;
 
     return (
-      <View style={styles.container}>
-        <View style={styles.inputContainer}>
+      <View className="w-full mb-4">
+        <View className="flex-row items-center relative w-full">
           <TextInput
-            style={[styles.input, inputStyle]}
+            className={`h-12 bg-gelo border border-gray-100 rounded-full pl-5 pr-10 text-lg font-normal text-gray-700 flex-1 mb-1.5 ${inputStyle}`}
             value={value}
             onChangeText={onChangeText}
             placeholder={placeholder}
@@ -41,12 +38,12 @@ class Input extends React.Component {
           {secureTextEntry && (
             <TouchableOpacity
               onPress={this.togglePasswordVisibility}
-              style={styles.icon}
+              className="absolute right-4 top-1/2 transform -translate-y-3"
             >
               <Icon
                 name={isPasswordVisible ? "eye-slash" : "eye"}
                 size={20}
-                color={colors.azulcinzento}
+                color="gray"
               />
             </TouchableOpacity>
           )}
@@ -55,39 +52,5 @@ class Input extends React.Component {
     );
   }
 }
-
-const styles = {
-  container: {
-    width: 400,
-    marginBottom: 5,
-  },
-  inputContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    position: "relative",
-  },
-  input: {
-    height: 50,
-    backgroundColor: colors.gelo,
-    width: 400,
-    borderColor: colors.gelo,
-    borderWidth: 1,
-    borderRadius: 30,
-    paddingLeft: 20,
-    paddingRight: 40,
-    fontSize: 18,
-    fontFamily: fonts.montserrat,
-    outline: "none",
-    color: colors.azulcinzento,
-    flex: 1,
-    marginBottom: 5,
-  },
-  icon: {
-    position: "absolute",
-    right: 18,
-    top: "50%",
-    transform: [{ translateY: -12 }],
-  },
-};
 
 export default Input;

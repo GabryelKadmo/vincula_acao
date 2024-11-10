@@ -1,10 +1,8 @@
 import React from "react";
 import { TextInput, View, Text, TouchableOpacity } from "react-native";
-import { colors } from "../../styles/colors";
-import { fonts } from "../../styles/fontsfamily";
 import Icon from "react-native-vector-icons/FontAwesome";
 
-class inputContact extends React.Component {
+class InputContact extends React.Component {
   state = {
     isPasswordVisible: false,
   };
@@ -28,10 +26,10 @@ class inputContact extends React.Component {
     const { isPasswordVisible } = this.state;
 
     return (
-      <View style={styles.container}>
-        <View style={styles.inputContainer}>
+      <View className="mb-1">
+        <View className="flex-row items-center relative">
           <TextInput
-            style={[styles.input, inputStyle]}
+            className={`h-12 border w-full border-gelo rounded-[15px] pl-5 pr-10 text-lg outline-none font-normal text-gray-700 bg-gelo  ${inputStyle}`}
             value={value}
             onChangeText={onChangeText}
             placeholder={placeholder}
@@ -41,12 +39,12 @@ class inputContact extends React.Component {
           {secureTextEntry && (
             <TouchableOpacity
               onPress={this.togglePasswordVisibility}
-              style={styles.icon}
+              className="absolute right-4 top-1/2 -translate-y-1/2"
             >
               <Icon
                 name={isPasswordVisible ? "eye-slash" : "eye"}
                 size={20}
-                color={colors.azulcinzento}
+                color="azulcinzento"
               />
             </TouchableOpacity>
           )}
@@ -56,38 +54,4 @@ class inputContact extends React.Component {
   }
 }
 
-const styles = {
-  container: {
-    width: 400,
-    marginBottom: 5,
-  },
-  inputContainer: {
-    flexDirection: "row",
-    alignItems: "center",
-    position: "relative",
-  },
-  input: {
-    height: 50,
-    backgroundColor: colors.gelo,
-    width: 400,
-    borderColor: colors.gelo,
-    borderWidth: 1,
-    borderRadius: 15,
-    paddingLeft: 20,
-    paddingRight: 40,
-    fontSize: 18,
-    fontFamily: fonts.montserrat,
-    outline: "none",
-    color: colors.azulcinzento,
-    flex: 1,
-    marginBottom: 5,
-  },
-  icon: {
-    position: "absolute",
-    right: 18,
-    top: "50%",
-    transform: [{ translateY: -12 }],
-  },
-};
-
-export default inputContact;
+export default InputContact;
