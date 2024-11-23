@@ -17,7 +17,7 @@ export default function Instituition() {
   return (
     <ScrollView
       className="bg-white"
-      contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 16 }}
+      contentContainerStyle={{ flexGrow: 1, paddingHorizontal: 16}}
     >
       <View className="bg-white flex-1">
         <HeaderAfterLogin />
@@ -27,7 +27,7 @@ export default function Instituition() {
           style={{
             width: "100%",
             height: undefined,
-            aspectRatio: 350 / 140,
+            aspectRatio: 280 / 100,
           }}
           resizeMode="contain"
         />
@@ -37,7 +37,7 @@ export default function Instituition() {
           vestuário e mais.
         </Text>
 
-        <View className="mb-4 justify-center items-center">
+        <View className="mb-4 justify-center items-center mb-24">
           {instituicoesData.map((instituicao) => (
             <InstituitionCard
               key={instituicao.id}
