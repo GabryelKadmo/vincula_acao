@@ -22,10 +22,23 @@ export default function Contact() {
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
   const [successAlert, setSuccessAlert] = useState(false);
-
+  const [emailError, setEmailError] = useState(false);
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+  const handleEmailChange = (text) => {
+    setEmail(text);
+    setEmailError(!isValidEmail(text)); // Atualiza o estado com base na validação
+  };
   const handleSendEmail = () => {
     if (!email || !message) {
       Alert.alert("Erro", "Por favor, preencha todos os campos.");
+      return;
+    }
+
+    if (!isValidEmail(email)) {
+      Alert.alert("Erro", "Por favor, insira um e-mail válido.");
       return;
     }
 
@@ -63,7 +76,8 @@ export default function Contact() {
         {successAlert && (
           <View style={styles.alertContainer}>
             <Text style={styles.alertText}>
-              <Text style={{ fontWeight: "bold" }}>✓ </Text>Mensagem enviada com sucesso!
+              <Text style={{ fontWeight: "bold" }}>✓ </Text>Mensagem enviada com
+              sucesso!
             </Text>
           </View>
         )}
@@ -78,7 +92,8 @@ export default function Contact() {
             resizeMode="contain"
           />
           <Text className="text-xl text-center text-black py-4 mb-4 w-full font-normal">
-            Dúvidas, sugestões ou deseja se conectar? {"\n"}Estamos aqui para ajudar.
+            Dúvidas, sugestões ou deseja se conectar? {"\n"}Estamos aqui para
+            ajudar.
           </Text>
         </View>
 
@@ -89,8 +104,17 @@ export default function Contact() {
               placeholder="Digite seu e-mail"
               keyboardType="email-address"
               value={email}
-              onChangeText={(text) => setEmail(text)}
+              onChangeText={handleEmailChange}
+              style={{
+                borderColor: emailError ? "red" : "gray",
+                borderWidth: 1,
+              }}
             />
+            {emailError && (
+              <Text style={{ color: "red", fontSize: 12, marginTop: 4 }}>
+                Por favor, insira um e-mail válido.
+              </Text>
+            )}
             <TextArea
               label="Mensagem"
               placeholder="Deixe sua mensagem ou sugestão..."
@@ -102,7 +126,13 @@ export default function Contact() {
 
         <View className="justify-center items-center mt-6">
           <Botao
-            title={loading ? <ActivityIndicator size="small" color="#FFF" /> : "Enviar Mensagem"}
+            title={
+              loading ? (
+                <ActivityIndicator size="small" color="#FFF" />
+              ) : (
+                "Enviar Mensagem"
+              )
+            }
             titleStyle={{ fontWeight: "medium" }}
             buttonStyle="!bg-salmao"
             onPress={handleSendEmail}
@@ -111,15 +141,31 @@ export default function Contact() {
         </View>
 
         <Text className="text-xl text-center text-black mt-6 py-4 mb-4 w-full font-normal">
-          Quer saber mais? Acompanhe nossas redes sociais e fique por dentro das campanhas.
+          Quer saber mais? Acompanhe nossas redes sociais e fique por dentro das
+          campanhas.
         </Text>
 
         <View className="flex-row justify-center items-center gap-4 mb-16">
-          <Image source={require("./assets/facebook.svg")} style={{ width: 28, height: 28 }} />
-          <Image source={require("./assets/instagram.svg")} style={{ width: 24, height: 24 }} />
-          <Image source={require("./assets/twitter.svg")} style={{ width: 24, height: 24 }} />
-          <Image source={require("./assets/threads.svg")} style={{ width: 24, height: 24 }} />
-          <Image source={require("./assets/linkedin.svg")} style={{ width: 24, height: 24 }} />
+          <Image
+            source={require("./assets/facebook.svg")}
+            style={{ width: 28, height: 28 }}
+          />
+          <Image
+            source={require("./assets/instagram.svg")}
+            style={{ width: 24, height: 24 }}
+          />
+          <Image
+            source={require("./assets/twitter.svg")}
+            style={{ width: 24, height: 24 }}
+          />
+          <Image
+            source={require("./assets/threads.svg")}
+            style={{ width: 24, height: 24 }}
+          />
+          <Image
+            source={require("./assets/linkedin.svg")}
+            style={{ width: 24, height: 24 }}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
