@@ -38,7 +38,7 @@ export default function App() {
           component={Instituition}
           options={{ headerShown: false }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="InstituitionDetails"
           component={InstituitionDetails}
           options={{ headerShown: false }}
