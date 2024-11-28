@@ -1,5 +1,12 @@
 import React from "react";
-import { View, Text, Image, ScrollView, ImageBackground } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  ImageBackground,
+  Linking,
+} from "react-native";
 import Header from "../../../components/header/header";
 import Botao from "../../../components/button/button";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -7,6 +14,18 @@ import FakeMap from "../assets/Mapa.png";
 
 export default function InstituitionDetails({ route }) {
   const { instituicao } = route.params;
+
+  // Função para abrir o WhatsApp com o número da instituição
+  const handleDoarPress = () => {
+    const telefone = instituicao.telefone;
+    const mensagem = `Olá, eu gostaria de doar para a iniciativa *${instituicao.nome}*! Pode me fornecer os *detalhes*?😀`;
+    const url = `https://wa.me/+55${telefone}?text=${encodeURIComponent(
+      mensagem
+    )}`;
+    Linking.openURL(url).catch((err) =>
+      console.error("Erro ao abrir o WhatsApp: ", err)
+    );
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -69,7 +88,11 @@ export default function InstituitionDetails({ route }) {
           </View>
 
           <View className="justify-center items-center mt-6">
-            <Botao title="Quero doar" titleStyle="text-lg font-medium" />
+            <Botao
+              title="Quero doar"
+              titleStyle="text-lg font-medium"
+              onPress={handleDoarPress}
+            />
           </View>
 
           <Text className="text-xs text-center text-gray-800 mt-6 mb-20 justify-start">
