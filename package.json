@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@expo-google-fonts/chilanka": "^0.2.3",
     "@expo-google-fonts/montserrat": "^0.2.3",
     "@expo/metro-runtime": "~3.2.3",
